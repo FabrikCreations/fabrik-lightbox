@@ -11,6 +11,8 @@
     "node_modules/",
     "components/",
     "website/",
-    "libs/"
+    "libs/",
+    "_site/",
+    "src/"
   ]
 }
