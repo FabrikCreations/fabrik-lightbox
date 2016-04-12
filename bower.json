@@ -1,5 +1,5 @@
 {
-  "name": "magnific-popup",
+  "name": "fabrik-lightbox",
   "main": [
     "dist/jquery.magnific-popup.js",
     "dist/magnific-popup.css"

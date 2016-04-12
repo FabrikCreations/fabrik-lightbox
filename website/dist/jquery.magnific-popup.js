@@ -1616,8 +1616,6 @@ $.magnificPopup.registerModule('zoom', {
               dataObj.title = item.el.attr(src);
             }
 
-            console.log(dataObj)
-
             mfp._parseMarkup(template, dataObj, item);
 
             mfp.updateStatus('ready');
