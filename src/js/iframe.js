@@ -52,7 +52,7 @@
         var embedSrc = item.src;
         var iframeSt = mfp.st.iframe;
         
-        fabrik.embedService.getEmbed(embedSrc).done(function (data) {
+        fabrik.embedService.getEmbed(embedSrc, { autoplay: true }).done(function (data) {
           embedSrc = $(data.html);
 
           var dataObj = {};
