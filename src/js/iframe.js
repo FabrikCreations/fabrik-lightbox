@@ -56,15 +56,17 @@
           embedSrc = $(data.html);
 
           var dataObj = {};
-
+          
           if (iframeSt.srcAction) {
             dataObj[iframeSt.srcAction] = embedSrc[0].src;
           }
 
-          var src = iframeSt.titleSrc;
-
           if (item.el) {
-            dataObj.title = item.el.attr(src);
+            dataObj.title = item.el.attr(iframeSt.titleSrc);
+          }
+
+          if (data.width && data.height) {
+            dataObj.fitframe_style = 'padding-bottom: ' + ((data.height / data.width) * 100).toPrecision(4) + '%';
           }
 
           mfp._parseMarkup(template, dataObj, item);
