@@ -1,4 +1,4 @@
-/*! Magnific Popup - v1.1.0 - 2016-05-25
+/*! Magnific Popup - v1.1.0 - 2016-05-31
 * http://dimsemenov.com/plugins/magnific-popup/
 * Copyright (c) 2016 Dmitry Semenov; */
 ;(function (factory) { 
@@ -1571,7 +1571,7 @@ $.magnificPopup.registerModule('zoom', {
                 '<div class="mfp-close"></div>' +
                 '<div class="mfp-fitframe fitframe-wrap">' + 
                   '<iframe class="mfp-iframe" src="//about:blank" frameborder="0" allowfullscreen scrolling="no"></iframe>' +
-                '<div>' +
+                '</div>' +
                 '<div class="mfp-title"></div>' +
               '</div>',
       srcAction: 'iframe_src',
