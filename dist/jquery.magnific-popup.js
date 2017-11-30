@@ -1621,8 +1621,6 @@ $.magnificPopup.registerModule('zoom', {
           if (data.width && data.height) {
 
             var aspectRatioHeightToWidth = data.height / data.width;
-            
-            dataObj.fitframe_style = 'padding-bottom: ' + (aspectRatioHeightToWidth * 100).toPrecision(4) + '%;';
 
             var windowHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
 
@@ -1633,8 +1631,10 @@ $.magnificPopup.registerModule('zoom', {
 
               var aspectRatioWidthToHeight = data.width / data.height;
 
-              dataObj.scale_style = 'max-width: ' + windowHeight * aspectRatioWidthToHeight + 'px;margin: 0 auto;'
+              dataObj.scale_style = 'max-width: ' + (windowHeight * aspectRatioWidthToHeight).toPrecision(4) + 'px;margin: 0 auto;'
             }
+
+            dataObj.fitframe_style = 'padding-bottom: ' + (aspectRatioHeightToWidth * 100).toPrecision(4) + '%;';
 
           }
 
