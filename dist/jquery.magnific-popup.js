@@ -1567,7 +1567,7 @@ $.magnificPopup.registerModule('zoom', {
 
   $.magnificPopup.registerModule(IFRAME_NS, {
     options: {
-      markup: '<div class="mfp-iframe-scaler">' +
+      markup: '<div class="mfp-iframe-scaler mfp-scale">' +
                 '<div class="mfp-close"></div>' +
                 '<div class="mfp-fitframe fitframe-wrap">' + 
                   '<iframe class="mfp-iframe" src="//about:blank" frameborder="0" allowfullscreen scrolling="no"></iframe>' +
@@ -1622,19 +1622,18 @@ $.magnificPopup.registerModule('zoom', {
 
             var aspectRatioHeightToWidth = data.height / data.width;
             
-
             dataObj.fitframe_style = 'padding-bottom: ' + (aspectRatioHeightToWidth * 100).toPrecision(4) + '%;';
 
             var windowHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
 
-            // fixed css widht
+            // fixed css width
             var calculatedHeight = 960 * aspectRatioHeightToWidth;
 
             if(calculatedHeight > windowHeight) {
 
               var aspectRatioWidthToHeight = data.width / data.height;
 
-              dataObj.fitframe_style += 'max-width: ' + windowHeight * aspectRatioWidthToHeight + 'px;'
+              dataObj.scale_style = 'max-width: ' + windowHeight * aspectRatioWidthToHeight + 'px;margin: 0 auto;'
             }
 
           }
