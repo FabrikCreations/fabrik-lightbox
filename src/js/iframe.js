@@ -20,11 +20,12 @@
 
   $.magnificPopup.registerModule(IFRAME_NS, {
     options: {
-      markup: '<div class="mfp-iframe-scaler mfp-scale">' +
+      markup: '<div class="mfp-iframe-scaler">' +
                 '<div class="mfp-close"></div>' +
+                '<div class="mfp-scale">' + 
                 '<div class="mfp-fitframe fitframe-wrap">' + 
                   '<iframe class="mfp-iframe" src="//about:blank" frameborder="0" allowfullscreen scrolling="no"></iframe>' +
-                '</div>' +
+                '</div></div>' +
                 '<div class="mfp-title"></div>' +
               '</div>',
       srcAction: 'iframe_src',
