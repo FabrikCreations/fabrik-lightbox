@@ -87,6 +87,9 @@
 
               dataObj.scale_style = 'max-width: ' + (windowHeight * aspectRatioWidthToHeight).toPrecision(4) + 'px;margin: 0 auto;'
             }
+            else {
+              dataObj.scale_style = '';
+            }
 
             dataObj.fitframe_style = 'padding-bottom: ' + (aspectRatioHeightToWidth * 100).toPrecision(4) + '%;';
 

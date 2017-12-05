@@ -1,4 +1,4 @@
-/*! Magnific Popup - v1.1.0 - 2017-12-01
+/*! Magnific Popup - v1.1.0 - 2017-12-05
 * http://dimsemenov.com/plugins/magnific-popup/
 * Copyright (c) 2017 Dmitry Semenov; */
 ;(function (factory) { 
@@ -201,8 +201,6 @@ MagnificPopup.prototype = {
 		} else {
 			mfp.currTemplate = {};
 		}
-
-
 
 		mfp.st = $.extend(true, {}, $.magnificPopup.defaults, data ); 
 		mfp.fixedContentPos = mfp.st.fixedContentPos === 'auto' ? !mfp.probablyMobile : mfp.st.fixedContentPos;
@@ -1633,6 +1631,9 @@ $.magnificPopup.registerModule('zoom', {
               var aspectRatioWidthToHeight = data.width / data.height;
 
               dataObj.scale_style = 'max-width: ' + (windowHeight * aspectRatioWidthToHeight).toPrecision(4) + 'px;margin: 0 auto;'
+            }
+            else {
+              dataObj.scale_style = '';
             }
 
             dataObj.fitframe_style = 'padding-bottom: ' + (aspectRatioHeightToWidth * 100).toPrecision(4) + '%;';

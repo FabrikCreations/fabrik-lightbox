@@ -185,8 +185,6 @@ MagnificPopup.prototype = {
 			mfp.currTemplate = {};
 		}
 
-
-
 		mfp.st = $.extend(true, {}, $.magnificPopup.defaults, data ); 
 		mfp.fixedContentPos = mfp.st.fixedContentPos === 'auto' ? !mfp.probablyMobile : mfp.st.fixedContentPos;
 
