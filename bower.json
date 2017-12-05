@@ -1,5 +1,6 @@
 {
   "name": "fabrik-lightbox",
+  "description": "A fork of magnific popup to use the Fabrik embed functions",
   "main": [
     "dist/jquery.magnific-popup.js",
     "dist/magnific-popup.css"
