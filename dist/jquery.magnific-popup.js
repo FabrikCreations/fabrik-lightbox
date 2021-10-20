@@ -1623,8 +1623,15 @@ $.magnificPopup.registerModule('zoom', {
 
             var windowHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
 
+            var contentWidth = document.getElementsByClassName("mfp-content")[0].offsetWidth;
+
+            if(!contentWidth) 
+            {
+              contentWidth = 960;
+            }
+
             // fixed css width
-            var calculatedHeight = 960 * aspectRatioHeightToWidth;
+            var calculatedHeight = contentWidth * aspectRatioHeightToWidth;
 
             if(calculatedHeight > windowHeight) {
 
