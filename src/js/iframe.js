@@ -80,8 +80,7 @@
 
             var contentWidth = document.getElementsByClassName("mfp-content")[0].offsetWidth;
 
-            if(!contentWidth) 
-            {
+            if(!contentWidth) {
               contentWidth = 960;
             }
 
