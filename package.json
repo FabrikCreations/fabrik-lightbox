@@ -24,7 +24,7 @@
     "url": "https://github.com/phil118/fabrik-lightbox.git"
   },
   "dependencies": {
-    "node-sass": "^4.7.2",
+    "node-sass": "^7.0.0",
     "qs": "^6.5.1"
   }
 }
