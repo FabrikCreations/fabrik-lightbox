@@ -3,9 +3,16 @@ var INLINE_NS = 'inline',
 	_hiddenClass,
 	_inlinePlaceholder,
 	_lastInlineElement,
+	_lastInlineVideo,
 	_putInlineElementsBack = function() {
 		if(_lastInlineElement) {
 			_inlinePlaceholder.after( _lastInlineElement.addClass(_hiddenClass) ).detach();
+
+			if (_lastInlineVideo && _lastInlineVideo.length) {
+                _lastInlineVideo.prop('muted', true);
+                _lastInlineVideo = null;
+            }
+
 			_lastInlineElement = null;
 		}
 	};
@@ -46,6 +53,8 @@ $.magnificPopup.registerModule(INLINE_NS, {
 						}
 						// replace target inline element with placeholder
 						_lastInlineElement = el.after(_inlinePlaceholder).detach().removeClass(_hiddenClass);
+
+						_lastInlineVideo = el.find('video');
 					}
 
 					mfp.updateStatus('ready');
