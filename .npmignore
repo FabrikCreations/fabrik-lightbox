@@ -1,7 +1,2 @@
-src/
-libs/
-bower.json
-composer.json
-gruntfile.js
-magnific-popup.jquery.json
-node_modules/
+*
+!dist

@@ -1,6 +1,6 @@
-/*! Magnific Popup - v1.1.0 - 2017-12-05
+/*! Magnific Popup - v1.1.0 - 2025-06-11
 * http://dimsemenov.com/plugins/magnific-popup/
-* Copyright (c) 2017 Dmitry Semenov; */
+* Copyright (c) 2025 Dmitry Semenov; */
 ;(function (factory) { 
 if (typeof define === 'function' && define.amd) { 
  // AMD. Register as an anonymous module. 
@@ -961,9 +961,16 @@ var INLINE_NS = 'inline',
 	_hiddenClass,
 	_inlinePlaceholder,
 	_lastInlineElement,
+	_lastInlineVideo,
 	_putInlineElementsBack = function() {
 		if(_lastInlineElement) {
 			_inlinePlaceholder.after( _lastInlineElement.addClass(_hiddenClass) ).detach();
+
+			if (_lastInlineVideo && _lastInlineVideo.length) {
+                _lastInlineVideo.prop('muted', true);
+                _lastInlineVideo = null;
+            }
+
 			_lastInlineElement = null;
 		}
 	};
@@ -1004,6 +1011,8 @@ $.magnificPopup.registerModule(INLINE_NS, {
 						}
 						// replace target inline element with placeholder
 						_lastInlineElement = el.after(_inlinePlaceholder).detach().removeClass(_hiddenClass);
+
+						_lastInlineVideo = el.find('video');
 					}
 
 					mfp.updateStatus('ready');
@@ -1625,8 +1634,7 @@ $.magnificPopup.registerModule('zoom', {
 
             var contentWidth = document.getElementsByClassName("mfp-content")[0].offsetWidth;
 
-            if(!contentWidth) 
-            {
+            if(!contentWidth) {
               contentWidth = 960;
             }
 

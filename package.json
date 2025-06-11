@@ -1,6 +1,6 @@
 {
-  "name": "fabrik-lightbox",
-  "version": "1.1.4",
+  "name": "fabrik-lightbox-min",
+  "version": "1.0.2",
   "description": "Lightbox based on top of Magnific. Can display inline HTML, iframes (YouTube video, Vimeo, Google Maps), or an image gallery. Animation effects are added with CSS3 transitions. For jQuery or Zepto.",
   "author": "Phil Jenkins <phil@fabrik.io> (https://fabrik.io)",
   "license": "MIT",
@@ -16,15 +16,17 @@
     "grunt-contrib-jshint": "~0.11.3",
     "grunt-contrib-uglify": "~0.9.2",
     "grunt-contrib-watch": "~0.6.1",
-    "grunt-jekyll": "~0.4.2",
-    "grunt-sass": "^1.0.0"
+    "grunt-dart-sass": "^2.0.1",
+    "grunt-jekyll": "~0.4.2"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/phil118/fabrik-lightbox.git"
   },
+  "files": [
+    "dist"
+  ],
   "dependencies": {
-    "node-sass": "^4.7.2",
     "qs": "^6.5.1"
   }
 }

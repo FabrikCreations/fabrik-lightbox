@@ -32,7 +32,7 @@ module.exports = function(grunt) {
       files: ['dist']
     },
     
-    sass: {                            
+    'dart-sass': {                            
       dist: {                      
         files: {      
           'dist/magnific-popup.css': 'src/css/main.scss'
@@ -117,7 +117,7 @@ module.exports = function(grunt) {
         tasks: ['jekyll:dev', 'copy:dev']
       },
       files: ['src/**'],
-      tasks: [ 'sass', 'mfpbuild', 'copy:dev', 'uglify']
+      tasks: [ 'dart-sass', 'mfpbuild', 'copy:dev', 'uglify']
     },
 
     cssmin: {
@@ -198,16 +198,16 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-sass');
+  grunt.loadNpmTasks('grunt-dart-sass');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-jekyll');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
 
   // Default task.
-  grunt.registerTask('default', ['sass', 'mfpbuild', 'uglify', 'copy', 'jekyll:dev']);
+  grunt.registerTask('default', ['dart-sass', 'mfpbuild', 'uglify', 'copy', 'jekyll:dev']);
 
-  grunt.registerTask('production', ['sass', 'mfpbuild', 'uglify', 'copy', 'cssmin', 'jekyll:production']);
-  grunt.registerTask('nosite', ['sass', 'mfpbuild', 'uglify']);
+  grunt.registerTask('production', ['dart-sass', 'mfpbuild', 'uglify', 'copy', 'cssmin', 'jekyll:production']);
+  grunt.registerTask('nosite', ['dart-sass', 'mfpbuild', 'uglify']);
   grunt.registerTask('hint', ['jshint']);
 
 };
