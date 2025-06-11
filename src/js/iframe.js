@@ -55,7 +55,7 @@
         var embedSrc = item.src;
         var iframeSt = mfp.st.iframe;
         
-        fabrik.embedService.getEmbed(embedSrc, { autoplay: true }).done(function (data) {
+        fabrik.embedService.getEmbed(embedSrc, { autoplay: true }).then(function (data) {
 
           // Hack for slate player until we normalise the returned object
           var oembedHtml = data.response ? data.response.html : data.html;
