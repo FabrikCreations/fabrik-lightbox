@@ -1,4 +1,4 @@
-/*! Magnific Popup - v1.1.0 - 2025-06-11
+/*! Magnific Popup - v1.1.0 - 2025-06-13
 * http://dimsemenov.com/plugins/magnific-popup/
 * Copyright (c) 2025 Dmitry Semenov; */
 ;(function (factory) { 
@@ -1609,7 +1609,7 @@ $.magnificPopup.registerModule('zoom', {
         var embedSrc = item.src;
         var iframeSt = mfp.st.iframe;
         
-        fabrik.embedService.getEmbed(embedSrc, { autoplay: true }).done(function (data) {
+        fabrik.embedService.getEmbed(embedSrc, { autoplay: true }).then(function (data) {
 
           // Hack for slate player until we normalise the returned object
           var oembedHtml = data.response ? data.response.html : data.html;
