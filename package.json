@@ -2,7 +2,7 @@
   "name": "fabrik-lightbox-min",
   "version": "1.0.5",
   "description": "Lightbox based on top of Magnific. Can display inline HTML, iframes (YouTube video, Vimeo, Google Maps), or an image gallery. Animation effects are added with CSS3 transitions. For jQuery or Zepto.",
-  "author": "Phil Jenkins <phil@fabrik.io> (https://fabrik.io)",
+  "author": "Fabrik (https://fabrik.io)",
   "license": "MIT",
   "main": "dist/jquery.magnific-popup.js",
   "style": "dist/magnific-popup.css",
