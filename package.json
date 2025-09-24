@@ -1,5 +1,5 @@
 {
-  "name": "fabrik-lightbox-min",
+  "name": "@fabrikcreations/fabrik-lightbox-min",
   "version": "1.0.7",
   "description": "Lightbox based on top of Magnific. Can display inline HTML, iframes (YouTube video, Vimeo, Google Maps), or an image gallery. Animation effects are added with CSS3 transitions. For jQuery or Zepto.",
   "author": "Fabrik (https://fabrik.io)",
