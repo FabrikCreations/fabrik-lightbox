@@ -2,7 +2,7 @@
 
 You can install via npm
 
-    npm i @fabrikcreations/fabrik-fitframe --save-dev
+    npm i @fabrikcreations/fabrik-lightbox-min --save-dev
 
 ### Magnific Popup
 
