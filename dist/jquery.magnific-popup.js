@@ -1612,11 +1612,11 @@ $.magnificPopup.registerModule('zoom', {
         var embedSrc = item.src;
         var iframeSt = mfp.st.iframe;
 
-        var autoPlay = mfp.st.iframe.autoPlay;
+        var autoplay = mfp.st.iframe.autoplay;
         var muted = mfp.st.iframe.muted;
         var loop = mfp.st.iframe.loop;
 
-        fabrik.embedService.getEmbed(embedSrc, { autoplay: autoPlay, muted: muted, loop: loop }).then(function (data) {
+        fabrik.embedService.getEmbed(embedSrc, { autoplay: autoplay, muted: muted, loop: loop }).then(function (data) {
 
           // Hack for slate player until we normalise the returned object
           var oembedHtml = data.response ? data.response.html : data.html;
