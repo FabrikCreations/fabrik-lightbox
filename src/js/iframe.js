@@ -30,7 +30,7 @@
               '</div>',
       srcAction: 'iframe_src',
       titleSrc: 'data-title',
-      autoPlay: true,
+      autoplay: true,
       muted: false,		
       loop: false
     },
